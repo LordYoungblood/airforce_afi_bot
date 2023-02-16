@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-// const { getExample } = require('./controllers')
+const { getAllUserInfo } = require('./controllers/mainController.js')
 const morgan = require('morgan')
 var cors = require('cors')
 
@@ -12,10 +12,10 @@ app.get('/', (req, res) => {
   res.status(200).send('Humble Beginnings')
 })
 
-// app.get('/search', (req, res) => {
-//   getAllMovies()
-//     .then(data => res.status(200).send(data))
-//     .catch(err => res.status(500).send(err))
-// })
+app.get('/users', (req, res) => {
+  getAllUserInfo()
+    .then(data => res.status(200).send(data))
+    .catch(err => res.status(500).send(err))
+})
 
 module.exports = app
