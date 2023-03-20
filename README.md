@@ -1,2 +1,1 @@
-# fermi
-Personal Dashboard and hub.
+# Full Stack Boilerplate tests
